@@ -1,10 +1,10 @@
 import Dependencies.*
 
-scalaVersion := "2.13.16"
+scalaVersion := "2.13.18"
 
 //  "dev.zio" %% "zio" % "2.1.1",
 
-ThisBuild / scalaVersion := "2.13.16"
+ThisBuild / scalaVersion := "2.13.18"
 ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / organization := "com.example"
 ThisBuild / organizationName := "example"
@@ -18,7 +18,7 @@ lazy val root = (project in file("."))
       zio, zioTest, zioTestSbt, zioTestMagnolia
     ),
     resolvers += "Artima Maven Repository" at "https://repo.artima.com/releases",
-    coverageEnabled := true,
+    // coverageEnabled := true,
     Test / testOptions += Tests.Argument(TestFrameworks.ScalaTest, "-u", "target/test-reports"),
     Test / testFrameworks += new TestFramework("zio.test.junit.ZTestJUnitFramework"),
     Test / testOptions += Tests.Argument(TestFrameworks.ZIOTest, "-u", "target/test-reports")
